@@ -1,0 +1,5 @@
+@CampusFlow.WebAPI_HostAddress = http://localhost:5277
+
+Accept: application/json
+
+###
