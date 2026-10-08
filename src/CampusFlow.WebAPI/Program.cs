@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using CampusFlow.WebAPI.Data;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
