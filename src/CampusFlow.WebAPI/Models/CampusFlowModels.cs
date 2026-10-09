@@ -48,6 +48,9 @@ namespace CampusFlow.WebAPI.Models
 
         [JsonPropertyName("capacity")]
         public int Capacity { get; set; }
+
+        [JsonPropertyName("enrollments")]
+        public List<Enrollment> Enrollments { get; set; }
     }
 
     public partial class Enrollment
@@ -60,6 +63,9 @@ namespace CampusFlow.WebAPI.Models
 
         [JsonPropertyName("studentId")]
         public int StudentId { get; set; }
+
+        [JsonPropertyName("Student")]
+        public Student Student { get; set; }
 
         [JsonPropertyName("enrolledAt")]
         public DateTime EnrolledAt { get; set; }
@@ -78,6 +84,9 @@ namespace CampusFlow.WebAPI.Models
 
         [JsonPropertyName("email")]
         public string Email { get; set; }
+
+        [JsonPropertyName("enrollments")]
+        public List<Enrollment> Enrollments { get; set; }
     }
 
     public partial class SeedData

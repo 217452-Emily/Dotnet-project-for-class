@@ -3,3 +3,42 @@
 Accept: application/json
 
 ###
+
+### List all courses
+GET {{CampusFlow.WebAPI_HostAddress}}/api/courses
+
+### Get one course
+GET {{CampusFlow.WebAPI_HostAddress}}/api/courses/1
+
+### Create a course
+POST {{CampusFlow.WebAPI_HostAddress}}/api/courses
+Content-Type: application/json
+
+{
+  "code": "SEC301",
+  "title": "Web Application Security",
+  "credits": 5,
+  "capacity": 25
+}
+
+### Update a course
+PUT {{CampusFlow.WebAPI_HostAddress}}/api/courses/1
+Content-Type: application/json
+
+{
+  "title": "Web APIs with ASP.NET Core 10",
+  "credits": 6,
+  "capacity": 30
+}
+
+### Delete a course
+DELETE {{CampusFlow.WebAPI_HostAddress}}/api/courses/3
+
+### Search courses
+GET {{CampusFlow.WebAPI_HostAddress}}/api/courses?search=Web
+
+### Filter courses by credits
+GET {{CampusFlow.WebAPI_HostAddress}}/api/courses?minCredits=6
+
+### Get statistics
+GET {{CampusFlow.WebAPI_HostAddress}}/api/statistics

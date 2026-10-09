@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using CampusFlow.WebAPI.Data;
 using System.Text.Json;
 using CampusFlow.WebAPI.Models;
+using CampusFlow.WebAPI.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,6 +54,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/api/ping", () => TypedResults.Ok(new { Status = "ok", Time = DateTime.UtcNow }));
+app.MapCourseEndpoints();
+
+app.MapStudentEndpoints();
+
+app.MapEnrollmentEndpoints();
+
+app.MapStatisticsEndpoints();
 
 app.Run();
